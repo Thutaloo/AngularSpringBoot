@@ -1,1 +1,45 @@
-<p>delete-vendor works!</p>
+<div style="margin: 10px">
+    <form (ngSubmit)="onSubmit()">
+      <h2>Delete Form</h2>
+      <hr />
+      <div class="form-group">
+        <label>Vendor ID</label>
+        <input
+          type="text"
+          class="form-control"
+          name="vendorID"
+          [(ngModel)]="vendor.vendorID"
+        />
+      </div>
+      <div class="form-group">
+        <label>Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          [(ngModel)]="vendor.name"
+        />
+      </div>
+      <div class="form-group">
+        <label>Date of Registration</label>
+        <input
+          type="date"
+          class="form-control"
+          name="dateOfRegistration"
+          [(ngModel)]="vendor.dateOfRegistration"
+        />
+      </div>
+      <div class="form-group">
+        <label>Durations in Days</label>
+        <input
+          type="text"
+          class="form-control"
+          name="durationInDays"
+          [(ngModel)]="vendor.durationInDays"
+        />
+      </div>
+      <hr />
+      <button class="btn btn-outline-danger" type="submit">Delete</button>
+    </form>
+  </div>
+  

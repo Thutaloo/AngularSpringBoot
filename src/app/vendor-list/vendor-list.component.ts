@@ -20,6 +20,10 @@ export class VendorListComponent implements OnInit {
     this.service.getVendors().subscribe(data => this.vendors = data);
   }
 
+  createVendor(){
+    this.route.navigate([`/create`]);
+
+  }
   updateVendor(vendorID: number) {
     this.route.navigate([`/update`, vendorID]);
   }

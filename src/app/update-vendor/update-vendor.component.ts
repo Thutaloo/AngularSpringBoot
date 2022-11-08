@@ -12,17 +12,18 @@ export class UpdateVendorComponent implements OnInit {
   vendorID: number;
   vendor: Vendor = new Vendor();
   message: string;
-  constructor(private service: VendorServiceService, private route: ActivatedRoute) { }
+  constructor(private service: VendorServiceService, private activatedRoute: ActivatedRoute, private route: Router) { }
 
   // http://localhost:64827/update/1
   // Will fetch 1 from URL
   ngOnInit(): void {
-    this.vendorID = this.route.snapshot.params[`vendorID`];
+    this.vendorID = this.activatedRoute.snapshot.params[`vendorID`];
     this.service.getVendorByID(this.vendorID).subscribe(data => { this.vendor = data });
   }
 
   onSubmit() {
-    this.service.updateVendor(this.vendorID, this.vendor).subscribe(data => { this.message = data });
-    alert(this.message);
+    this.service.updateVendor(this.vendorID, this.vendor).subscribe(data => { this.message = data});
+    this.route.navigate(['vendors']).then(() => { window.location.reload(); }); //Same as in app-routing.module
+    // alert(this.message);
   }
 }

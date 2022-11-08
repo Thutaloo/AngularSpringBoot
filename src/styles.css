@@ -1,1 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  
+  
+  li {
+    float: left;
+  }
+  
+  
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  
+  
+  .active {
+    background-color: #04AA6D;
+  } */
+  @import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Oswald");
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+  
+  #container {
+    position: relative;
+    text-align: center;
+  }
+  
+  #backgroundColor {
+    background-color: #f4d8f4;
+  }
+  
+  #banner {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  #centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h1 {
+    font-family: "Permanent Marker";
+    color: #9e80ff;
+    font-size: 5vw !important;
+  }
+  
+  #title-font{
+    font-family: "Oswald";
+    color: #9e80ff;
+    margin-top: 0px;
+  }
+  
+  #button-style {
+    background-color: #f4d8f4;
+    border: 5px solid;
+    border-color: #f4d8f4;
+    border-radius: 20px;
+    margin-left: 5%;
+  }
+  
+  #table-style {
+    font-family: "Oswald";
+    color: #9e80ff !important;
+  }
+  
+  .center-div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
